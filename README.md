@@ -4,7 +4,7 @@ To run scripts use command : node "name".js "name".json
 
 ### Task1
 
-Iput data shoud look like this:
+Input data shoud look like this:
 
 {
     "initialNumber" : 31,
@@ -17,7 +17,7 @@ Output:
 
 ### Task2 
 
-Iput data shoud look like this:
+Input data shoud look like this:
 
 { "arr" : [1,3,5,1,9,8,8] }
 
@@ -27,7 +27,7 @@ Output:
 
 ### Task3
 
-Iput data shoud look like this:
+Input data shoud look like this:
 
 { "numberOfKilos" : 150 }
 
@@ -37,7 +37,7 @@ Output:
 
 ### Task4
 
-Iput data shoud look like this:
+Input data shoud look like this:
 
 {
     "width" : 3,
