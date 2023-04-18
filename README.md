@@ -15,10 +15,11 @@ npm i
 In order to run task solution use next:
 
 ```
-node task<number>/index.js task<number>/input.json
+cd task<number>/
+node index.js input.json
 ```
 
-Execution result will be stored in `task<number>/output.json`
+Execution result will be stored in `output.json`
 
 ## Example of input and output data:
 
@@ -33,14 +34,14 @@ Input data shoud look like this:
 }
 ```
 
-- Key `initialNumber` stands for number we try to convert to `targetNumber`
+- Key `initialNumber` stands for number we try to convert to `targetNumber`.
 
 Output:
 
 ```
 {
     "isPossible":true,
-    "resutSteps":[
+    "resultSteps":[
         "truncate:622;31",
         "divide: 311;31",
         "append:311;311"
@@ -62,11 +63,15 @@ Input data shoud look like this:
 { "arr" : [1,3,5,1,9,8,8] }
 ```
 
+- Key `arr` consists of numbers, some of whitch are repeated.
+
 Output:
 
 ```
 { "repetitiveElements":[1,8] }
 ```
+
+- Key `repetitiveElements` contains repeated numbers.
 
 ### Task3
 
@@ -74,17 +79,24 @@ Input data shoud look like this:
 
 ```
 { "numberOfKilos" : 150 }
-```
+``` 
+
+- Key `numberOfKilos` it is number of kilos we have to overcome with minimal weight.
 
 Output:
 
 ```
 {
-    "result":"65.0040",
+    "result":"150.008",
     "multipliers":[1,1,0,0,0,0,2,0,0,0,2,0],
     "kilos":[0.5,1,2.5,4.536,5,10,11.34,15,15.88,20,20.412,25]
 }
 ```
+
+- Key `result` is a total minimal weight.
+- Key `multipliers` holds the number of plates on the barbell.
+- Key `kilos` consists of kilograms per plate.
+
 
 ### Task4
 
@@ -111,6 +123,10 @@ Input data shoud look like this:
 }
 ```
 
+- Key `width` is stage width.
+- Key `height` is stage height.
+- Key `positionsOfActors` coordinates of actors in the matrix.
+
 Output: 
 
 ```
@@ -123,3 +139,5 @@ Output:
     ]
 }
 ```
+
+- Key `lightingPosition` consists of the coordinates of the position of the searchlight and the direction in which it shines.

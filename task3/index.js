@@ -23,7 +23,7 @@ findResult(kilos, kilos.length-1, multiples, goal+minDelta);
 console.log("\n\nOur best result");
 showResult(tempResultMultiples, kilos);
 
-fs.writeFileSync("output.json", JSON.stringify({"result" : tempResult.toFixed(4), "multipliers" : tempResultMultiples, kilos}));
+fs.writeFileSync("output.json", JSON.stringify({"result" : (tempResult.toFixed(4)*2+20), "multipliers" : tempResultMultiples, kilos}));
 
 function findResult(kilos, indexCurrKilos, multiples, leftKilos){
 

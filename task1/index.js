@@ -9,7 +9,7 @@ console.log(isPossible, resutSteps);
 
 fs.writeFileSync("output.json", JSON.stringify({isPossible, resutSteps}));
 
-function findIfFirstNumCanTransformToSecond(initialNumber, targetNumber, resutSteps){
+function findIfFirstNumCanTransformToSecond(initialNumber, targetNumber, resultSteps){
 
     if(targetNumber.toString() === initialNumber.toString()){
         return true;
@@ -23,8 +23,8 @@ function findIfFirstNumCanTransformToSecond(initialNumber, targetNumber, resutSt
         if(targetNumber%2 === 0){
             console.log(targetNumber);
             targetNumber = targetNumber / 2;
-            resutSteps.push('divide: '+targetNumber + ";" + initialNumber);
-            return findIfFirstNumCanTransformToSecond(initialNumber, targetNumber ,resutSteps);
+            resultSteps.push('divide: '+targetNumber + ";" + initialNumber);
+            return findIfFirstNumCanTransformToSecond(initialNumber, targetNumber ,resultSteps);
         }else{
             return false;
         }
@@ -33,13 +33,13 @@ function findIfFirstNumCanTransformToSecond(initialNumber, targetNumber, resutSt
 
         if(subTargetNumber > initialNumber) {
             targetNumber = subTargetNumber;
-            resutSteps.push('truncate:' +targetNumber + ";" + initialNumber );
+            resultSteps.push('truncate:' +targetNumber + ";" + initialNumber );
         }else{
             initialNumber += "1";
-            resutSteps.push('append:'+ targetNumber );
+            resultSteps.push('append:'+ targetNumber );
         }
         
-        return findIfFirstNumCanTransformToSecond(initialNumber, targetNumber, resutSteps);
+        return findIfFirstNumCanTransformToSecond(initialNumber, targetNumber, resultSteps);
 
     }
 
